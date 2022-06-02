@@ -20,6 +20,6 @@
 		</main>
 	</div>
 	<footer class="c-contFooter"></footer>
-	<script type="text/javascript" src="<?php echo $url_cli_views; ?>js/actions_pages/landingpage-home.js"></script>
+	<script type="text/javascript" src="<?php echo $url_cli_views;?>js/actions_pages/landingpage-home.js"></script>
 </body>
 </html>
