@@ -1,0 +1,57 @@
+@mixin icon-burguer($color){
+	&{
+		cursor: pointer;
+		box-sizing: border-box;
+		padding-left: 2.15rem;
+		position: relative;
+		font-size: 1rem;
+		width: auto;
+		min-height: 25px;
+		height: 25px;
+		display: table;
+		color: $color;
+		&:before{
+			content: "";
+			display: block;
+			width: 1.8rem;
+			height: 0.23rem;
+			background-color: $color;
+			position: absolute;
+			left: 0;
+			top: .15rem;
+			box-shadow: 0 .43rem,	0 .83rem;
+		}
+	}
+}
+@mixin icon-close($color, $width, $height, $line-width){
+	&{
+		cursor: pointer;
+	  color: $color;
+	  position: absolute;
+	  margin-top: 0;
+	  margin-left: 0;
+	  width: $width;
+	  height: $height;
+		&:before {
+		  content: '';
+		  position: absolute;
+		  top: 10px;
+		  width: $width;
+		  height: $line-width;
+		  background-color: currentColor;
+		  -webkit-transform: rotate(-45deg);
+		          transform: rotate(-45deg);
+		}
+
+		&:after {
+		  content: '';
+		  position: absolute;
+		  top: 10px;
+		  width: $width;
+		  height: $line-width;
+		  background-color: currentColor;
+		  -webkit-transform: rotate(45deg);
+		          transform: rotate(45deg);
+		}
+	}
+}

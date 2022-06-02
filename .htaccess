@@ -1,0 +1,19 @@
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteBase /tmp_ProjectLicoreria/
+
+############RENAME PRINCIPAL FILES
+#RewriteRule ^/?$ index.php
+#RewriteRule signin?$ views/login.php
+#RewriteRule signup?$ views/account.php
+#RewriteRule complete-register?$ views/complete-register.php
+#RewriteRule logout?$ php/process_logout-client.php
+
+############RENAME PAGES FOR ADMIN
+#RewriteRule admin?$ admin/index.php
+#RewriteRule dashboard?$ admin/views/dashboard.php
+
+
+############RENAME ACTION IN PAGES OF THE CLIENT
+#RewriteRule select-profile?$ views/select-profile.php

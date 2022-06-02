@@ -1,0 +1,218 @@
+/* IMPORTAR LAS FUNCIONES */
+ @import 'variables';
+ @import 'mixins';
+
+*,
+*::before,
+*::before{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: $theme-font-family;
+}
+body{
+	margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;	
+}
+a{
+	text-decoration: none;
+}
+ul{
+	list-style: none;
+	padding: 0;
+}
+dl, ol, ul {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+ol, ul {
+  padding-left: 2rem;
+}
+button,
+select{
+	outline: none;
+}
+img{
+	max-width: 100%;
+	height: auto;
+	content-visibility: auto;
+}
+p{
+	margin-bottom: 0;
+}
+input[readonly]{
+	display: none;
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	user-select: none;
+}
+input::-ms-reveal,
+input::-ms-clear {
+  display: none;
+}
+strong, b{
+	font-weight: bold;
+}
+.font-w-300{
+	font-weight: 300;
+}
+/* UTITLITIES CLASS */
+.col-row{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.col-tab-3{
+  @media (min-width: 768px){
+    max-width: 33.33333%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.33333%;
+    flex: 0 0 33.33333%;
+    position: relative;
+    min-height: 1px;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+  }
+}
+.col-desk-4{
+  @media (min-width: 1025px){
+    max-width: 25%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    position: relative;
+    min-height: 1px;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+  }
+}
+.mx-w-theme{
+	max-width: 1200px;
+	width: 95%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.iconcustom-mburguerhome__show{
+	@include icon-burguer($theme-color-text-contrast);
+}
+.iconcustom-mburguerhome__close{
+	@include icon-close($color-white, 1.8rem, 1.8rem, 1px);
+	top: .95rem;
+	right: 0.5rem;
+}
+.slider-arrow-left svg,
+.slider-arrow-right svg{
+	fill: none;
+}
+.slider-arrow-right svg{
+	transform: rotate(180deg);
+}
+.sp-layer{
+	position: absolute;
+	box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.al-slider__content--center,
+.al-slider__content--left,
+.al-slider__content--right{
+	display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+}
+.al-slider__content--center{
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+}
+.al-slider__content--left{
+	-webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: flex-start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  text-align: left;
+}
+.al-slider__content--right{
+	-webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: flex-end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  text-align: right;
+}
+/* EXTENDS */
+%icon-top-info-header{
+	display: inline-block;
+  max-width: 22px;
+  width: 22px;
+  height: auto;
+}
+/* CONFIGURACIONES PARA SLIDER - OWLCAROUSER */
+/* OWLCAROUSEL - CONTENEDOR DE SLIDES */
+//.owl-carousel .owl-stage-outer{}
+/* OWLCAROUSEL - BOTONES DESPLAZAMIENTO */
+/*
+.owl-carousel .owl-nav button.owl-next, 
+.owl-carousel .owl-nav button.owl-prev{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(50%);
+  width: 100%;
+}
+.owl-carousel .owl-nav button.owl-next span, 
+.owl-carousel .owl-nav button.owl-prev span{
+  margin: 15px;
+  display: inline-block;
+}
+.owl-carousel .owl-nav button.owl-prev{
+  left: 0;
+  text-align: left;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.owl-carousel .owl-nav button.owl-next{
+  right: 0;
+  text-align: right;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+*/
