@@ -30,16 +30,18 @@ $(document).ready(function(){
     responsive:{
 	    0:{
         items:1,
+        loop:true,
         nav:false
 	    },
 	    600:{
         items:1,
+        loop:true,
         nav:false
 	    },
 	    1000:{
         items:1,
-        nav:false,
-        loop:false
+        loop:true,
+        nav:false
 	    }
     }
 	});
